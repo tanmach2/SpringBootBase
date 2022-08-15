@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun UserRepositoryTest" project="ShopmeBackEnd" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.shopme.admin.user.UserRepositoryTest" time="0.313" displayname="UserRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.user.UserRepositoryTest]">
+    <testcase name="testListAllUser" classname="com.shopme.admin.user.UserRepositoryTest" time="0.242" displayname="testListAllUser()" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.user.UserRepositoryTest]/[method:testListAllUser()]"/>
+    <testcase name="testCreateUserWithOneRole" classname="com.shopme.admin.user.UserRepositoryTest" time="0.058" displayname="testCreateUserWithOneRole()" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.user.UserRepositoryTest]/[method:testCreateUserWithOneRole()]"/>
+    <testcase name="testCreateUserWithTwoRoles" classname="com.shopme.admin.user.UserRepositoryTest" time="0.011" displayname="testCreateUserWithTwoRoles()" uniqueid="[engine:junit-jupiter]/[class:com.shopme.admin.user.UserRepositoryTest]/[method:testCreateUserWithTwoRoles()]"/>
+  </testsuite>
+</testrun>
