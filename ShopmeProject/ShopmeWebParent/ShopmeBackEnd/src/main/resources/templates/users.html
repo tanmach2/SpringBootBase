@@ -7,6 +7,8 @@
 	<title>Home - Shopme Admin</title>
 	
 	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/fontawesome/all.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{/style.css}">
 	<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
 	<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
@@ -65,6 +67,10 @@
 			<a th:href="@{/users/new}">Create New User</a>
 		</div>
 		
+		<div th:if="${message != null}" class="alert alert-success text-center">
+			[[${message}]]
+		</div>
+		
 		<div>
 			<table class="table table-bordered table-striped table-hover table-responsive-xL">
 				<thead class="thead-dark">
@@ -81,30 +87,23 @@
 				</thead>
 				<tbody>
 					<tr th:each="user : ${listUser}">
-						<td>[[${user.id}]]</td>
-						<td>[[${user.photos}]]</td>
+						<td>[[${user.id}]]</td> 
+						<td><span class="fas fa-portrait fa-3x icon-silver" ></span></td>
 						<td>[[${user.email}]]</td>
 						<td>[[${user.firstName}]]</td>
 						<td>[[${user.lastName}]]</td>
 						<td>[[${user.roles}]]</td>
-						<td>[[${user.enabled}]]</td>
-						<td>Edit &nbsp; Delete</td>
+						<td>
+							<a class="fas fa-check-circle fa-2x icon-green" href=""></a>
+						</td>
+						<td>
+							<a class="fas fa-edit fa-2x icon-green" href=""></a>
+							&nbsp; 
+							<a class="fas fa-trash fa-2x icon-dark" href=""></a>
+						</td>
 					</tr>
 				</tbody>
 			</table>
-			<div class="form-group row">
-				<label class="col-sm-4 col-form-Label">Roles</label>
-				<div class="col-sm-8">
-					<th:block th:each="role : ${listRoles}">
-						<input type="checkbox" th:field="*{roles}" 
-						th:text="[[${role.name}]]" 
-						th:value="${role.id}"/>					
-					</th:block>
-					
-					<input type="checkbox"/>			
-					
-				</div>
-			</div>
 		</div>
 		
 		<div class="text-center">
