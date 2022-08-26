@@ -1,9 +1,7 @@
 package com.shopme.admin.user;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-import java.util.Optional;
-
+import com.shopme.common.entity.Role;
+import com.shopme.common.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -12,8 +10,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.Rollback;
 
-import com.shopme.common.entity.Role;
-import com.shopme.common.entity.User;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
@@ -99,6 +96,21 @@ public class UserRepositoryTest {
 		assertThat(user).isNotNull();
 		
 		
+	}
+
+
+	@Test
+	public void testCountById(){
+		Integer id = 33;
+		Long countById = repo.countById(id);
+
+		assertThat(countById).isNotNull().isGreaterThan(0);
+	}
+
+	@Test
+	public void testDisabledUser(){
+		Integer id = 41;
+		repo.updateEnabledStatus(id, false);
 	}
 }
 

@@ -3,8 +3,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/ShopmeBackEnd/pom.xml" />
         <option value="$PROJECT_DIR$/ShopmeProject/ShopmeCommon/pom.xml" />
-        <option value="$PROJECT_DIR$/ShopmeProject/ShopmeWebParent/pom.xml" />
       </list>
     </option>
   </component>
